@@ -79,10 +79,5 @@ class Solution(object):
             M.append(t.M[0])
             t.delTOP()
         return M
-
-#以下為示範
-N=[56,-5,1,64,-1,1,-1,-6357,-1,0,54,1,-453,13,-75,13,0,0]
-N2=Solution().heap_sort(N)
-print(N2)
-
+    
 #參考資料:自己1年前用C++寫的程式
