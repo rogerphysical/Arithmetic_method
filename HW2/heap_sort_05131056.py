@@ -64,9 +64,7 @@ class Tree(object):
             self.changemin(i)
     #delTOP為刪除第一項值 將最後一項值填入第一項
     def delTOP(self):
-        self.M[0]=self.M[len(self.M)-1]
-        self.M.pop()
-
+        self.M[0]=self.M[-1]
 #heapsort是運用heap tree 進行sort
 class Solution(object):
     def heap_sort(self,nums):
