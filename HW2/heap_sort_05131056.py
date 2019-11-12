@@ -78,10 +78,10 @@ class Solution(object):
             M.append(t.M[0])
             t.delTOP()
         return M
-    
+'''
 #以下為示範
 N=[-44,0,4444,1,-1,4,-1,44,-4,-1,0,-4444]
 N2=Solution().heap_sort(N)
 print(N2)
-
+'''
 #參考資料:自己1年前用C++寫的程式
