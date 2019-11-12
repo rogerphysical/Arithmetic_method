@@ -65,6 +65,7 @@ class Tree(object):
     #delTOP為刪除第一項值 將最後一項值填入第一項
     def delTOP(self):
         self.M[0]=self.M[-1]
+        self.M.pop(-1)
 #heapsort是運用heap tree 進行sort
 class Solution(object):
     def heap_sort(self,nums):
@@ -77,10 +78,10 @@ class Solution(object):
             M.append(t.M[0])
             t.delTOP()
         return M
-'''
+    
 #以下為示範
 N=[-44,0,4444,1,-1,4,-1,44,-4,-1,0,-4444]
 N2=Solution().heap_sort(N)
 print(N2)
-'''
+
 #參考資料:自己1年前用C++寫的程式
