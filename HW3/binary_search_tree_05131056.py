@@ -8,13 +8,6 @@ class Solution(object):
     
     #return TreeNode
     def insert(self,root,val):
-        '''
-        if root.val==val:
-            alpha=TreeNode(val)
-            alpha.left=root.left
-            root.left=alpha
-            return root
-        '''
         if root.val>=val:
             if root.left==None:
                 root.left=TreeNode(val)
