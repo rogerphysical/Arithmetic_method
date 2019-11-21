@@ -102,9 +102,9 @@ print("2不存在:",Solution().search(N,2)==None)
 
 #刪除所有-1
 print("delete--------------------刪除所有-1")
-print("-1不存在(刪除前)",Solution().search(N,-1)==None)
+print("-1不存在(刪除前):",Solution().search(N,-1)==None)
 Solution().delete(N,-1)
-print("-1不存在(刪除後)",Solution().search(N,-1)==None)
+print("-1不存在(刪除後):",Solution().search(N,-1)==None)
 
 #先刪除後新增
 print("modify--------------------刪除44，新增2")
@@ -124,8 +124,8 @@ search--------------------
 0存在: True
 2不存在: True
 delete--------------------刪除所有-1
--1不存在(刪除前) False
--1不存在(刪除後) True
+-1不存在(刪除前): False
+-1不存在(刪除後): True
 modify--------------------刪除44，新增2
 44不存在(刪除後): True
 2存在(新增後): True
