@@ -26,7 +26,6 @@ class Graph:
                          N.append(i)
           return M
      
-     #先進先出
      def DFS(self, s):
           M = [s]
           N = []
@@ -45,19 +44,7 @@ class Graph:
                          if self.check(M, [], i) == False:
                               N.append(i)
           return M
-          
-     #後進先出
-     def DFS2(self, s):
-          M = [s]
-          N = self.graph[s]
-          while len(N) != 0:
-               M.append(N[-1])
-               N = N[0:-1]
-               for i in self.graph[M[-1]]:
-                    if self.check(M, N, i) == False:
-                         N.append(i)
-          return M
-     
+
 '''
 g = Graph()
 g.addEdge(0, 1)
@@ -75,7 +62,6 @@ g.addEdge(6, 4)
 print(g.BFS(2))
 #DFS可製成迷宮
 print(g.DFS(2))
-print(g.DFS2(2))
 '''
 
 #參考資料:自己
