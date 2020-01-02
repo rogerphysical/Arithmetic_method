@@ -81,7 +81,7 @@ class Graph():
                               v = j
           return [u, v, which]
 
-
+'''
 g = Graph(9)
 g.graph = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
            [4, 0, 8, 0, 0, 0, 0, 11, 0],
@@ -101,4 +101,6 @@ g.addEdge(0, 3, 5)
 g.addEdge(1, 3, 15)
 g.addEdge(2, 3, 4)
 print(g.Kruskal())
-
+'''
+#參考資料(Dijkstra):自己
+#參考資料(Kruskal):http://alrightchiu.github.io/SecondRound/minimum-spanning-treekruskals-algorithm.html
