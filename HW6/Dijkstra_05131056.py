@@ -2,15 +2,12 @@ class Graph():
      def __init__(self, vertices):
           self.V = vertices
           self.graph = []
-          self.graph_matrix = [[0 for column in range(vertices)]
-                               for row in range(vertices)]
-
+          
      def addEdge(self, u, v, w):
           if self.graph == []:
                self.graph = [[0 for column in range(self.V)]
                              for row in range(self.V)]
           self.graph[u][v] = w
-          self.graph[v][u] = w
           return True
 
      def Dijkstra(self, s):
@@ -24,8 +21,8 @@ class Graph():
           for i in range(1, self.V-1):
                for j in choises:
                     if j != None:
-                         if g.graph[item[0]][j] != 0:
-                              d = distance[str(item[0])]+g.graph[item[0]][j]
+                         if self.graph[item[0]][j] != 0:
+                              d = distance[str(item[0])]+self.graph[item[0]][j]
                               if distance[str(j)] == 0:
                                    distance[str(j)] = d
                               else:
@@ -47,7 +44,11 @@ class Graph():
 
      def Kruskal(self):
           k = {}
-          choises = self.graph
+          choises = [[0 for column in range(self.V)]
+                     for row in range(self.V)]
+          for i in range(self.V):
+               for j in range(self.V):
+                    choises[i][j] = self.graph[i][j]
           sub = [-1 for i in range(self.V)]
           while len(k) < self.V-1:
                item = self.min_in_graph(choises)
@@ -72,8 +73,8 @@ class Graph():
           
      def min_in_graph(self, choises):
           which = float('inf')
-          for j in range(1, self.V):
-               for i in range(j):
+          for j in range(self.V):
+               for i in range(self.V):
                     if choises[i][j] != 0:
                          if choises[i][j] < which:
                               which = choises[i][j]
@@ -91,7 +92,7 @@ g.graph = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
            [0, 0, 0, 0, 0, 2, 0, 1, 6],
            [8, 11, 0, 0, 0, 0, 1, 0, 7],
            [0, 0, 2, 0, 0, 0, 6, 7, 0]]
-print(g.Dijkstra(0))
+print("Dijkstra(0):", g.Dijkstra(0))
 
 g = Graph(4)
 g.addEdge(0, 1, 10)
@@ -99,7 +100,27 @@ g.addEdge(0, 2, 6)
 g.addEdge(0, 3, 5)
 g.addEdge(1, 3, 15)
 g.addEdge(2, 3, 4)
-print(g.Kruskal())
+print("Kruskal:", g.Kruskal())
+
+g = Graph(6)
+g.graph = [[0,8,0,0,0,1],
+           [3,0,1,0,0,0],
+           [5,0,0,2,2,0],
+           [0,4,6,0,7,3],
+           [0,0,0,0,0,0],
+           [0,0,0,2,8,0]]
+print("Dijkstra(0):", g.Dijkstra(0))
+print("Kruskal:", g.Kruskal())
+
+g = Graph(6)
+g.graph = [[0,5,0,0,0,0],
+           [0,0,6,0,4,0],
+           [0,0,0,0,3,2],
+           [0,0,4,0,0,0],
+           [0,0,0,1,0,6],
+           [3,7,0,0,0,0]]
+print("Dijkstra(0):", g.Dijkstra(0))
+print("Kruskal:", g.Kruskal())
 '''
 #參考資料(Dijkstra):自己
 #參考資料(Kruskal):http://alrightchiu.github.io/SecondRound/minimum-spanning-treekruskals-algorithm.html
