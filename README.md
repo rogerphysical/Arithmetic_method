@@ -6,11 +6,9 @@
 # HW1:
 quicksort
 # HW2:
-heapcort
-mergesort
+heapcort、mergesort
 # HW3:
-BST
-DFS
+BST、DFS
 # HW4:
 hash table
 # HW5:
