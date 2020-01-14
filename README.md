@@ -3,9 +3,17 @@
 中文名:鄭策丰
 主修；數學
 
-HW1；quicksort
-HW2；heapcort、mergesort
-HW3:BST
-HW4:hash table
-HW5:BFS、DFS
-HW6:dijkstra、Kruskal
+# HW1:
+quicksort
+# HW2:
+heapcort
+mergesort
+# HW3:
+BST
+DFS
+# HW4:
+hash table
+# HW5:
+BFS、DFS
+# HW6:
+dijkstra、Kruskal
