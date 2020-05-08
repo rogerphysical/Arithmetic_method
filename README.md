@@ -1,7 +1,6 @@
 # Arithmetic method
 
 這是Roger github之中的資料結構與演算法
-* 主修:數學
 * 興趣:各種有趣、不無趣、好不有趣、不好不無趣的事
 
 ## [HW1](https://github.com/rogerphysical/rogerphysical/tree/master/HW1):
